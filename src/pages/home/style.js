@@ -28,7 +28,10 @@ const style = () => StyleSheet.create({
     },
     viewBottom: {
         height: height * .1,
-    }
+        justifyContent: "flex-end",
+
+    },
+    
     
 
 });

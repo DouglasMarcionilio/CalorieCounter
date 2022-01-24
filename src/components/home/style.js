@@ -88,6 +88,44 @@ const style = () => StyleSheet.create({
 
     //Estilo Bottom bar
     containerBottomBar: {
+        flexDirection: "row",
+        width: '100%',
+        height: '100%',
+        justifyContent: "space-around",
+        alignItems: "center",
+    },
+    octagon: {
+    },
+    octagonBar: {
+        width: 62,
+        height: 24,
+        backgroundColor: "#624BFF",
+        elevation: 5
+    },
+    octagonUp: {},
+    octagonFlat: {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        transform: [{ rotate: "90deg" }],
+    },
+    octagonLeft: {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        transform: [{ rotate: "-45deg" }],
+    },
+    octagonRight: {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        transform: [{ rotate: "45deg" }],
+    },
+
+    //Estilo defict card
+    containerDefict: {
+        width: '95%',
+        elevation: 10,
         
     }
 });
