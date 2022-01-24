@@ -11,7 +11,7 @@ const style = () => StyleSheet.create({
         borderRadius: 15,
         elevation: 10,
         backgroundColor: 'white',
-        marginTop: 10,
+        marginTop: 7,
         alignSelf: "center",
         backgroundColor: '#384FE8'
     },
@@ -32,9 +32,9 @@ const style = () => StyleSheet.create({
     },
     defictCal: {
         flexDirection:"row",
-        justifyContent: "space-between",
+        justifyContent: "space-around",
         alignItems:"center",
-        width: '40%',
+        width: '100%',
         alignSelf:"center",
         marginBottom: 7,
     },
@@ -95,9 +95,11 @@ const style = () => StyleSheet.create({
         alignItems: "center",
     },
     octagon: {
+        justifyContent: "center",
+        alignItems: "center",
     },
     octagonBar: {
-        width: 62,
+        width: 61,
         height: 24,
         backgroundColor: "#624BFF",
         elevation: 5
@@ -120,14 +122,7 @@ const style = () => StyleSheet.create({
         top: 0,
         left: 0,
         transform: [{ rotate: "45deg" }],
-    },
-
-    //Estilo defict card
-    containerDefict: {
-        width: '95%',
-        elevation: 10,
-        
-    }
+    },    
 });
 
 export default style;

@@ -13,15 +13,15 @@ class Cardshoje extends React.Component{
                 <PieChart
                     data={[
                           {
-                            name: "Gasto",
+                            name: "Consumido",
                             value: 2280,
                             color: "#F00",
                             legendFontColor: "white",
                             legendFontSize: 15,
                           },
                           {
-                            name: "Meta",
-                            value: 2500,
+                            name: "Restante",
+                            value: 220,
                             color: "green",
                             legendFontColor: "white",
                             legendFontSize: 15,
@@ -43,18 +43,18 @@ class Cardshoje extends React.Component{
                 <View style={style().defictCal}>
                     <View style={{flexDirection:"row", marginRight: 10, alignItems:"center"}}>
                         <Text style={style().semanaTitle}>
-                            Meta:
+                            Consumido:
                         </Text>
                         <Text style={style().valDefictCal}>
-                            4500
+                            2280
                         </Text>
                     </View>
                     <View style={{flexDirection: "row", marginLeft: 10, alignItems:"center"}}>
                         <Text style={style().semanaTitle}>
-                            Gasto: 
+                            Restante: 
                         </Text>
                         <Text style={style().valDefictCal}>
-                            1500
+                            220
                         </Text>
                     </View>
                 </View>
