@@ -2,30 +2,22 @@ import React from "react";
 import { View, Text, Dimensions } from "react-native";
 import { LineChart } from "react-native-chart-kit";
 import style from "./style";
-import {backCard, backNomeTitleButton, backgroundColor, titleColor} from "../../shared/Consts";
+import {backCard, backNomeTitleButton, backColor, titleColor} from "../../shared/Consts";
 
 class SemanaCard extends React.Component{
     render(){
         return (
             <View style={style().semanaCard}>
                         <View style={style().semanaTitleView}>
-                            <Text style={style().semanaTitle}>Essa Semana</Text>
+                            <Text style={style().semanaTitle}>{this.props.titulo}</Text>
                         </View>
                         <View style={{flex: 1}}>
                         <LineChart
                             data={{
-                            labels: ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"],
+                            labels: this.props.label,
                             datasets: [
                                 {
-                                data: [
-                                    1760,
-                                    2026,
-                                    3040,
-                                    2520,
-                                    3250,
-                                    2100,
-                                    1460
-                                ]
+                                data: this.props.data
                                 }
                             ]
                             }}
@@ -57,7 +49,7 @@ class SemanaCard extends React.Component{
                             }}
                         />
                         </View>
-                        <View style={style().defictCal}>
+                        <View style={[style().defictCal, {opacity: this.props.opDados}]}>
                             <View style={{flexDirection:"row", marginRight: 10, alignItems:"center"}}>
                                 <Text style={style().stringColors}>
                                     Total:
@@ -68,7 +60,7 @@ class SemanaCard extends React.Component{
                             </View>
                             <View style={{flexDirection: "row", marginLeft: 10, alignItems:"center"}}>
                                 <Text style={style().stringColors}>
-                                    Défict: 
+                                    Consumido: 
                                 </Text>
                                 <Text style={style().valDefictCal}>
                                     1500

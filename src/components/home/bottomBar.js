@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import style from "./style";
 import { Ionicons } from '@expo/vector-icons';
-import {backCard, backNomeTitleButton, backgroundColor, titleColor, iconColors} from "../../shared/Consts";
+import {backCard, backNomeTitleButton, backColor, titleColor, iconColors} from "../../shared/Consts";
 
 class BottomBar extends React.Component{
     

@@ -20,7 +20,20 @@ class Home extends react.Component{
                         <NomeDados />
                         <CardExercicio />
                         <Cardshoje />
-                        <SemanaCard />
+                        <SemanaCard 
+                            titulo={'Essa semana'}
+                            label={["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"]}
+                            data={[
+                                1760,
+                                2026,
+                                3040,
+                                2520,
+                                3250,
+                                2100,
+                                1460
+                            ]}
+                            opDados={1}
+                        />
                     </View>
                     <View style={style().viewBottom}>
                         <BottomBar nav={this.props.navigation}/>

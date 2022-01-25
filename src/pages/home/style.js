@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions, StatusBar, Platform } from "react-native";
-import {backCard, backNomeTitleButton, backgroundColor, titleColor, iconColors} from "../../shared/Consts";
+import {backCard, backNomeTitleButton, backColor, titleColor, iconColors} from "../../shared/Consts";
 
 const {width, height} = Dimensions.get("window");
 
@@ -7,7 +7,7 @@ const style = () => StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        backgroundColor
+        backgroundColor: backColor,
     },
     supMenu: {
         height: height * .05,
@@ -15,6 +15,7 @@ const style = () => StyleSheet.create({
         borderBottomRightRadius: 150,
         backgroundColor: titleColor,
         elevation: 10,
+        shadowColor: 'white',
         justifyContent: "center"
     },
     TitleSup: {

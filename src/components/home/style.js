@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from "react-native";
-import {backCard, backNomeTitleButton, backgroundColor, titleColor, iconColors} from "../../shared/Consts";
+import {backCard, backNomeTitleButton, backColor, titleColor, iconColors} from "../../shared/Consts";
 
 const {width, height} = Dimensions.get("window");
 

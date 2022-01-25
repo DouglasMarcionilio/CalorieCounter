@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Dimensions } from 'react-native';
 import style from './style';
 import { PieChart } from 'react-native-chart-kit';
-import {backCard, backNomeTitleButton, backgroundColor, titleColor} from "../../shared/Consts";
+import {backCard, backNomeTitleButton, backColor, titleColor} from "../../shared/Consts";
 
 class Cardshoje extends React.Component{
     render(){
