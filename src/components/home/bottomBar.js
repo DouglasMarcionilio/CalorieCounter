@@ -10,10 +10,16 @@ class BottomBar extends React.Component{
         this.props.nav.navigate('Profile');
     }
 
+    goReport = () => {
+        this.props.nav.navigate('Report');
+    }
+
     render(){
         return (
             <View style={style().containerBottomBar}>
-                <TouchableOpacity>
+                <TouchableOpacity
+                    onPress={this.goReport}
+                >
                     <Ionicons name="bar-chart-outline" size={32} color={iconColors}/>
                 </TouchableOpacity>
                 <View style={style().octagon}>
