@@ -10,7 +10,7 @@ class NomeDados extends React.Component{
                         <View style={style().viewPesoAlt}>
                             <View>
                                 <Text style={style().pesoAltTitle}>Peso</Text>
-                                <Text style={style().pesoAltData}>68.5 Kg</Text>
+                                <Text style={style().pesoAltData}>89.5 Kg</Text>
                             </View>
                             <View>
                                 <Text style={style().pesoAltTitle}>Altura</Text>

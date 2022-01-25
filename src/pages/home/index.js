@@ -5,6 +5,7 @@ import SemanaCard from "../../components/home/semanaCard";
 import NomeDados from "../../components/home/nomeDados";
 import Cardshoje from "../../components/home/cardsHoje";
 import BottomBar from "../../components/home/bottomBar";
+import CardExercicio from "../../components/home/cardExercicio";
 
 class Home extends react.Component{
     render(){
@@ -17,11 +18,12 @@ class Home extends react.Component{
                     </View>
                     <View style={style().principalView}>
                         <NomeDados />
+                        <CardExercicio />
                         <Cardshoje />
                         <SemanaCard />
                     </View>
                     <View style={style().viewBottom}>
-                        <BottomBar />
+                        <BottomBar nav={this.props.navigation}/>
                     </View>
                 </View>
             

@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Dimensions } from "react-native";
 import { LineChart } from "react-native-chart-kit";
 import style from "./style";
+import {backCard, backNomeTitleButton, backgroundColor, titleColor} from "../../shared/Consts";
 
 class SemanaCard extends React.Component{
     render(){
@@ -34,9 +35,9 @@ class SemanaCard extends React.Component{
                             yAxisSuffix=" Kcal"
                             yAxisInterval={1}
                             chartConfig={{
-                            backgroundColor: "#384FE8",
-                            backgroundGradientFrom: "#384FE8",
-                            backgroundGradientTo: "#384FE8",
+                            backgroundColor: backCard,
+                            backgroundGradientFrom: backCard,
+                            backgroundGradientTo: backCard,
                             decimalPlaces: 0,
                             color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                             labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
@@ -46,7 +47,7 @@ class SemanaCard extends React.Component{
                             propsForDots: {
                                 r: "6",
                                 strokeWidth: "2",
-                                stroke: "#624BFF"
+                                stroke: titleColor
                             }
                             }}
                             bezier
@@ -58,7 +59,7 @@ class SemanaCard extends React.Component{
                         </View>
                         <View style={style().defictCal}>
                             <View style={{flexDirection:"row", marginRight: 10, alignItems:"center"}}>
-                                <Text style={style().semanaTitle}>
+                                <Text style={style().stringColors}>
                                     Total:
                                 </Text>
                                 <Text style={style().valDefictCal}>
@@ -66,7 +67,7 @@ class SemanaCard extends React.Component{
                                 </Text>
                             </View>
                             <View style={{flexDirection: "row", marginLeft: 10, alignItems:"center"}}>
-                                <Text style={style().semanaTitle}>
+                                <Text style={style().stringColors}>
                                     Défict: 
                                 </Text>
                                 <Text style={style().valDefictCal}>

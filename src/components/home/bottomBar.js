@@ -1,16 +1,21 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import style from "./style";
 import { Ionicons } from '@expo/vector-icons';
+import {backCard, backNomeTitleButton, backgroundColor, titleColor, iconColors} from "../../shared/Consts";
 
 class BottomBar extends React.Component{
     
+    goProfile = () => {
+        this.props.nav.navigate('Profile');
+    }
+
     render(){
         return (
             <View style={style().containerBottomBar}>
-                <View>
-                    <Ionicons name="bar-chart-outline" size={32} color={'#384FE8'}/>
-                </View>
+                <TouchableOpacity>
+                    <Ionicons name="bar-chart-outline" size={32} color={iconColors}/>
+                </TouchableOpacity>
                 <View style={style().octagon}>
                     <View style={[style().octagonUp, style().octagonBar]} />
                     <View style={[style().octagonFlat, style().octagonBar]} />
@@ -18,9 +23,11 @@ class BottomBar extends React.Component{
                     <View style={[style().octagonRight, style().octagonBar]} />
                     <Ionicons name="add-sharp" size={32} color={'white'} style={{position: "absolute", elevation: 10}}/>
                 </View>
-                <View>
-                    <Ionicons name="person-outline" size={32}  color={'#384FE8'}/>
-                </View>
+                <TouchableOpacity
+                    onPress={this.goProfile}
+                >
+                    <Ionicons name="person-outline" size={32}  color={iconColors}/>
+                </TouchableOpacity>
             </View>
         );
     }

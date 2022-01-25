@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Dimensions } from 'react-native';
 import style from './style';
 import { PieChart } from 'react-native-chart-kit';
+import {backCard, backNomeTitleButton, backgroundColor, titleColor} from "../../shared/Consts";
 
 class Cardshoje extends React.Component{
     render(){
@@ -15,14 +16,14 @@ class Cardshoje extends React.Component{
                           {
                             name: "Consumido",
                             value: 2280,
-                            color: "#F00",
+                            color: titleColor,
                             legendFontColor: "white",
                             legendFontSize: 15,
                           },
                           {
                             name: "Restante",
                             value: 220,
-                            color: "green",
+                            color: 'white',
                             legendFontColor: "white",
                             legendFontSize: 15,
                           },
@@ -30,19 +31,19 @@ class Cardshoje extends React.Component{
                     width={Dimensions.get("window").width * .952}
                     height={Dimensions.get("window").height * .16}
                     chartConfig={{
-                        backgroundGradientFrom: "#384FE8",
-                        backgroundGradientTo: "#384FE8",
+                        backgroundGradientFrom: backCard,
+                        backgroundGradientTo: backCard,
                         color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                         strokeWidth: 2,
                         barPercentage: 1,
                         useShadowColorFromDataset: false
                       }}
                     accessor={"value"}
-                    backgroundColor={"#384FE8"}
+                    backgroundColor={backCard}
                 />
                 <View style={style().defictCal}>
                     <View style={{flexDirection:"row", marginRight: 10, alignItems:"center"}}>
-                        <Text style={style().semanaTitle}>
+                        <Text style={style().stringColors}>
                             Consumido:
                         </Text>
                         <Text style={style().valDefictCal}>
@@ -50,7 +51,7 @@ class Cardshoje extends React.Component{
                         </Text>
                     </View>
                     <View style={{flexDirection: "row", marginLeft: 10, alignItems:"center"}}>
-                        <Text style={style().semanaTitle}>
+                        <Text style={style().stringColors}>
                             Restante: 
                         </Text>
                         <Text style={style().valDefictCal}>

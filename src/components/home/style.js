@@ -1,4 +1,5 @@
 import { StyleSheet, Dimensions } from "react-native";
+import {backCard, backNomeTitleButton, backgroundColor, titleColor, iconColors} from "../../shared/Consts";
 
 const {width, height} = Dimensions.get("window");
 
@@ -13,19 +14,20 @@ const style = () => StyleSheet.create({
         backgroundColor: 'white',
         marginTop: 7,
         alignSelf: "center",
-        backgroundColor: '#384FE8'
+        backgroundColor: backCard,
     },
     semanaTitleView: {
         height: height * .03,
         width: '80%',
         borderBottomRightRadius: 150,
-        backgroundColor: '#624BFF',
+        backgroundColor: titleColor,
         elevation: 10,
+        shadowColor: 'white',
         justifyContent: "center",
         borderTopLeftRadius: 100,
     },
     semanaTitle: {
-        color: 'white',
+        color: backNomeTitleButton,
         fontWeight: 'bold',
         fontSize: 15,
         alignSelf: "center",
@@ -41,6 +43,12 @@ const style = () => StyleSheet.create({
     valDefictCal: {
         color: 'white',
     },
+    stringColors: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 15,
+        alignSelf: "center",
+    },
 
     // Estilo do Nome e dos dados inferiores
     viewNome: {
@@ -52,7 +60,7 @@ const style = () => StyleSheet.create({
         marginBottom: 10,
     },
     nome: {
-        color: 'black',
+        color: titleColor,
         fontWeight: 'bold',
         fontSize: 20,
     },
@@ -63,14 +71,14 @@ const style = () => StyleSheet.create({
         justifyContent: "space-between",
     },
     pesoAltTitle: {
-        color: 'black',
+        color: titleColor,
         fontWeight: 'bold',
         fontSize: 16,
         alignSelf: "center",
         marginTop: 7
     },
     pesoAltData: {
-        color: 'gray',
+        color: titleColor,
         fontWeight: 'bold',
         fontSize: 14,
         alignSelf: "center",
@@ -81,7 +89,7 @@ const style = () => StyleSheet.create({
         width: '95%',
         height: height * .23,
         elevation: 10,
-        backgroundColor: '#384FE8',
+        backgroundColor: backCard,
         alignSelf: "center",
         borderRadius: 15,
     },
@@ -101,7 +109,7 @@ const style = () => StyleSheet.create({
     octagonBar: {
         width: 61,
         height: 24,
-        backgroundColor: "#624BFF",
+        backgroundColor: titleColor,
         elevation: 5
     },
     octagonUp: {},
@@ -122,7 +130,30 @@ const style = () => StyleSheet.create({
         top: 0,
         left: 0,
         transform: [{ rotate: "45deg" }],
-    },    
+    },
+
+    //Estilo card exercicio
+    viewExercicio:{
+        width: '95%',
+        height: height * .13,
+        elevation: 10,
+        backgroundColor: backCard,
+        alignSelf: "center",
+        borderRadius: 15,
+        marginBottom: 7,
+    },
+    viewRowExercicio: {
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
+    },
+    subtitleExercicio: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 14,
+        alignSelf: "center",
+    }
 });
 
 export default style;
